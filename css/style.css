@@ -237,30 +237,30 @@ section {
 	width: 100%;
 }
 
-.katyhuff {
+.gil{
  width: 370px;
  height:370px;
  display:block;
 	display: inline-block;
 	position: relative;
- background:transparent url('../images/strom.png') center top no-repeat;
+ background:transparent url('../images/gil_giglio.jpg') center top no-repeat;
 }
 
-.katyhuff:hover {
-   background-image: url('../images/stromicon.jpg');
+.gil:hover {
+    background-image: url('../images/gil_giglio.jpg');
 }
 
-.amgallow {
+.jody{
  width: 370px;
  height:370px;
  display:block;
 	display: inline-block;
 	position: relative;
- background:transparent url('../images/katy.png') center top no-repeat;
+  background:transparent url('../images/jody_giglio.JPG') center top no-repeat;
 }
 
-.amgallow:hover {
-   background-image: url('../images/katyicon.png');
+.jody:hover {
+   background-image: url('../images/jody_giglio.JPG');
 }
 
 .hover-effect i {

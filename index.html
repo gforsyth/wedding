@@ -42,11 +42,14 @@
 		<!-- Pretty Box -->
 		<link href="css/prettyPhoto.css" rel="stylesheet">
 
+    <!-- FAQ -->
+    <link href="css"
 		<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
+
 
 
 	</head>
@@ -93,9 +96,11 @@
 						<li><a href="#events">Events</a></li>
 						<li><a href="#accommodation">Accommodation</a></li>
 						<li><a href="#location">Location</a></li>
+						<li><a href="#gettingthere">Getting There</a></li>
 						<li><a href="#gallery">Gallery</a></li>
 						<li><a href="#rsvp">RSVP</a></li>
-						<li><a href="#registry">Gifts</a></li>
+						<li><a href="#FAQ">FAQ</a></li>
+						<li><a href="#registry">Registry</a></li>
 					</ul>
 				</div>
 			</div>
@@ -300,7 +305,7 @@
                                                         <img src= "./images/grey_cottage_front_porch.jpg" class="img-responsive"  alt="" />
 							<h5>Welcome Dinner</h5>
                                                         <h6>October 6th, 2017
-                                                        <br/>6:00 - 8:00 PM</h6>
+                                                        <br/></h6>
                                                         <p>Grey Cottage
                                                         <br/>45 Prospect Mountain Road
                                                         <br/>Salisbury, CT 06068</p>
@@ -316,7 +321,7 @@
                                                   <img src="./images/grey_cottage_front_porch.jpg" class="img-responsive" alt="" />
 							<h5>Wedding Ceremony</h5>
                                                         <h6>October 7th, 2017<br/>
-                                                        3:00 PM</h6>
+                                                        </h6>
                                                         <p>Out in the field</p>
                                                         <p>Grey Cottage
                                                         <br/>45 Prospect Mountain Road
@@ -328,7 +333,7 @@
                                                   <img src="./images/grey_cottage_front_porch.jpg" class="img-responsive" alt="" />
                                                         <h5>Wedding Reception</h5>
                                                         <h6>October 7th, 2017
-                                                        <br/>3:30 PM - ??? PM</h6>
+                                                        <br/></h6>
                                                         <p>Under the tent</p>
                                                         <p>Grey Cottage
                                                         <br/>45 Prospect Mountain Road
@@ -344,7 +349,7 @@
                                                   <img src="./images/grey_cottage_front_porch.jpg" class="img-responsive" alt="" />
                                                         <h5>Farewell Brunch</h5>
                                                         <h6>October 8th, 2017
-                                                        <br/>11:00 AM - 2:00 PM</h6>
+                                                        <br/></h6>
                                                         <p>Under the tent</p>
                                                         <p>Grey Cottage
                                                         <br/>45 Prospect Mountain Road
@@ -358,7 +363,7 @@
 
 		<!-- ========== EVENTS END ========== -->
 
-		<!-- ========== ACOOMMODATION START ========== -->
+		<!-- ========== ACCOMMODATION START ========== -->
 
                 <section id="accommodation" style="background: #f5f4ec;">
 			<div class="container">
@@ -426,7 +431,7 @@
 					<div class="col-sm-2" data-scroll-reveal="enter from the left after 0.5s">
 						<h5>AirBnB</h5>
 						<p>There are nice homes available via AirBnB in Salisbury, Lakeville
-						and Canaan. You will need a car to get around, though!</p>
+						and Canaan. </p>
 						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
 					</div>
 					<div class="col-sm-2" data-scroll-reveal="enter from the right after 0.5s">
@@ -447,97 +452,140 @@
                 <!-- ========== LOCATION START ========== -->
                 <section id="location">
 
-                        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBILVYRAEpHNUNpPxXiRcBNIYCg2pEb9Cc &amp;sensor=true"></script>
-                        <script type="text/javascript">
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBILVYRAEpHNUNpPxXiRcBNIYCg2pEb9Cc &amp;sensor=true"></script>
+                <script type="text/javascript">
 
-                                function initialize() {
+                        function initialize() {
 
-                                        // Create an array of styles.
-                                        var styles = [
-                                          {
-                                            "stylers": [
-                                              { "saturation": -100 },
-                                              { "gamma": 1 }
-                                            ]
-                                          },{
-                                            "featureType": "water",
-                                            "stylers": [
-                                              { "lightness": -12 }
-                                            ]
-                                          }
-                                        ];
-                                        // Create a new StyledMapType object, passing it the array of styles,
-                                        // as well as the name to be displayed on the map type control.
-                                        var styledMap = new google.maps.StyledMapType(styles,
-                                        {name: "Styled Map"});
-
-                                                                var mapOptions = {
-                                                                        scrollwheel: false,
-                                                                        zoom: 15,
-                                                                        center:
-                                                                          new
-                                                                          google.maps.LatLng(41.992450, -73.402262),
-                                        mapTypeControlOptions: {
-                                          mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                                        }
-                                        }
-                                        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-                                        //Associate the styled map with the MapTypeId and set it to display.
-                                        map.mapTypes.set('map_style', styledMap);
-                                        map.setMapTypeId('map_style');
-
-                                        setMarkers(map, weddingplaces,'images/map-marker.png' );
-                                }
-
-
-
-                                var weddingplaces = [
-                                        ['Grey Cottage.', 41.992283, -73.401640],
+                                // Create an array of styles.
+                                var styles = [
+                                    {
+                                    "stylers": [
+                                        { "saturation": -100 },
+                                        { "gamma": 1 }
+                                    ]
+                                    },{
+                                    "featureType": "water",
+                                    "stylers": [
+                                        { "lightness": -12 }
+                                    ]
+                                    }
                                 ];
+                                // Create a new StyledMapType object, passing it the array of styles,
+                                // as well as the name to be displayed on the map type control.
+                                var styledMap = new google.maps.StyledMapType(styles,
+                                {name: "Styled Map"});
 
-                                function setMarkers(map, locations, markerpic) {
-                                        // Add markers to the map
-                                        var image = {
-                                                url: markerpic,
-                                                // This marker is 42 pixels wide by 68 pixels tall.
-                                                size: new google.maps.Size(21,34),
-                                                // The origin for this image is 0,0.
-                                                //origin: new google.maps.Point(0,0),
-                                                origin: null,
-                                                // The anchor for this image is the base of the pin at 20,42.
-                                                //anchor: new google.maps.Point(20, 42)
-                                                anchor: null
-                                        };
-
-                                        for (var i = 0; i < locations.length; i++) {
-                                                var place = locations[i];
-                                                var myLatLng = new google.maps.LatLng(place[1], place[2]);
-                                                var marker = new google.maps.Marker({
-                                                        position: myLatLng,
-                                                        map: map,
-                                                        icon: image,
-                                                        title: place[0],
-                                                        zIndex: place[3],
-                                                        animation: google.maps.Animation.DROP
-                                                });
-
-                                                var contentString = "Some content";
-                                                google.maps.event.addListener(marker, "click", function() {
-                                                        infowindow.setContent(this.html);
-                                                        infowindow.open(map, this);
-                                                });
-                                        }
+                                                        var mapOptions = {
+                                                                scrollwheel: false,
+                                                                zoom: 15,
+                                                                center:
+                                                                    new
+                                                                    google.maps.LatLng(41.992450, -73.402262),
+                                mapTypeControlOptions: {
+                                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
                                 }
+                                }
+                                var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-                                google.maps.event.addDomListener(window, 'load', initialize);
-                        </script>
+                                //Associate the styled map with the MapTypeId and set it to display.
+                                map.mapTypes.set('map_style', styledMap);
+                                map.setMapTypeId('map_style');
 
-                        <a href="https://www.google.com/maps/d/edit?mid=zwJ5Sc8HIDN4.kHElukijiprI">
-                        <div id="map-canvas"></div>
-                      </a>
-                        <!-- ========== LOCATION END ========== -->
+                                setMarkers(map, weddingplaces,'images/map-marker.png' );
+                        }
 
+
+
+                        var weddingplaces = [
+                                ['Grey Cottage.', 41.992283, -73.401640],
+                        ];
+
+                        function setMarkers(map, locations, markerpic) {
+                                // Add markers to the map
+                                var image = {
+                                        url: markerpic,
+                                        // This marker is 42 pixels wide by 68 pixels tall.
+                                        size: new google.maps.Size(21,34),
+                                        // The origin for this image is 0,0.
+                                        //origin: new google.maps.Point(0,0),
+                                        origin: null,
+                                        // The anchor for this image is the base of the pin at 20,42.
+                                        //anchor: new google.maps.Point(20, 42)
+                                        anchor: null
+                                };
+
+                                for (var i = 0; i < locations.length; i++) {
+                                        var place = locations[i];
+                                        var myLatLng = new google.maps.LatLng(place[1], place[2]);
+                                        var marker = new google.maps.Marker({
+                                                position: myLatLng,
+                                                map: map,
+                                                icon: image,
+                                                title: place[0],
+                                                zIndex: place[3],
+                                                animation: google.maps.Animation.DROP
+                                        });
+
+                                        var contentString = "Some content";
+                                        google.maps.event.addListener(marker, "click", function() {
+                                                infowindow.setContent(this.html);
+                                                infowindow.open(map, this);
+                                        });
+                                }
+                        }
+
+                        google.maps.event.addDomListener(window, 'load', initialize);
+                </script>
+
+                <!--  <a href="https://www.google.com/maps/d/edit?mid=zwJ5Sc8HIDN4.kHElukijiprI">-->
+                <div id="map-canvas"></div>
+                </a>
+    <!-- ========== LOCATION END ========== -->
+
+    <!-- GETTING THERE START -->
+		<section id="gettingthere">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+						<h2>Getting there</h2>
+						<p><span></span><i class="fa fa-heart"></i><span></span></p>
+					</div>
+				<div class="row" data-scroll-reveal>
+			<div class="container text-left">
+            <h4>Travelling by car</h4>
+            Salisbury is around a 2 and a half hour drive from New York City,
+            and a 3 and a half hour drive from Boston. For better or worse, the
+            wedding is on a holiday weekend, so traffic will probably tack on
+            some time to those estimates. Sorry!
+
+            <h4>Travelling by air</h4>
+
+            <ul class="faq" style="list-style-type:disc">
+            <li>The closest airport is <a href="https://goo.gl/maps/TYaTZ3mxvS82">Hartford International Airport</a> which
+                is approximately an hour's drive from the Grey Cottage.</li>
+            <li>
+              <a href="https://goo.gl/maps/2bAaLTdNJrx">Albany International Airport</a> is a 90 minutes drive from the Grey Cottage.
+            </li>
+            <li>
+                <a href="https://goo.gl/maps/5VeapG5Mar92">JFK</a> and New York City, generally, are about 2 and a half hours away by car.
+            </li>
+            </ul>
+
+            <h4>Other transport</h4>
+            Salisbury is not famed for it's public transportation network.
+            <br/>
+            The <a href="http://as0.mta.info/mnr/stations/station_detail.cfm?key=174">Wassaic Metro-North Station</a> will
+            get you within a 40 minute drive of the venue if you're looking to take a train up from New York City.
+            <br/>
+            Amtrak has a station in Pittsfield, MA, that has service from Chicago to Boston, this is also about a 45 minute drive from the venue.
+
+      </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- GETTING THERE END -->
 
 		<!-- ========== GALLERY START ========== -->
 
@@ -586,7 +634,7 @@
 
                                 <p>Invitations with snail-mail RSVP postcards
                                 are on their way, but if you would like to RSVP
-                                using the magic pipes, you can fill do so at the
+                                using the magic pipes, you can do so at the
                                 Google Form below!</p>
 						<div class="item">
                                                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzxAnphzMcy2gYC2bQEs7GTen7yfWRBTT2iSVGK-ZmuukHaA/viewform">
@@ -604,27 +652,70 @@
 
 
 
+
+    <!-- ========== FAQ START ========== -->
+
+		<section id="FAQ" style="background: #f5f4ec;">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-sm-12 heading" data-scroll-reveal>
+                                        <h2>FAQ</h2>
+                                        <p><span></span><i class="fa fa-heart"></i><span></span></p>
+          </div>
+			<div class="container text-left">
+            <ul class="faq" style="list-style-type:disc">
+            <li class="q"><h4>What should I wear?</h4></li>
+            <li class="a">You do you. Gil is wearing a kilt. Jody is wearing a dress. We're getting married in a field
+                so you might want to leave the stilettos at home. And it's October in New England, so wear that lovely
+            sleeveless number but you'll probably want a shawl, too.</li>
+
+            <li class="q"><h4>Am I invited to the welcome dinner?</h4></li>
+            <li class="a">Yes. Yes you are.</li>
+
+            </ul>
+        </div>
+      </div>
+    <!-- ========== FAQ END ========== -->
+
 		<!-- ========== REGISTRY START ========== -->
 
 		<section id="registry" style="background: #f5f4ec;">
 			<div class="container text-center">
 				<div class="row">
 					<div class="col-sm-12 heading" data-scroll-reveal>
-                                        <h2>Gifts</h2>
+                                        <h2>Registry</h2>
                                         <p><span></span><i class="fa fa-heart"></i><span></span></p>
-
-						<div class="item">
-                <!-- 
-<br><script id='script_myregistry_giftlist_iframe' type='text/javascript' src='http://www.myregistry.com//Visitors/GiftList/iFrames/EmbedRegistry.ashx?r=h8z6Xdr_UsOupLq7ebZsbw2&v=2'></script>
-                      -->                           </div>
-
-					</div>
+			<div class="container text-left">
+          <br/>
+For us, this ceremony is a chance not only to "make it official," but to bring
+together and celebrate with our community of friends and family in a place that
+is very dear to us. Over the years we have accumulated more than enough goods
+and gear to make our home a full and happy one, and there is very little that we
+need. Our wedding venue is a ways off the beaten path, and we recognize that the
+time, effort, and expense of trekking out to Salisbury is not inconsiderable!
+What we want more than anything is to have everyone together to celebrate with
+us: please know that your being there at our wedding really is the most
+meaningful gift we could ask for. We hope you will be able to join us in October
+for food, fellowship, and dancing! If you *would* like to give a gift, we wanted
+to make it as simple as possible by sharing a list of items that we know would
+be cherished and put to good use wherever life takes us (especially in the coming years as we transition away from some of our IKEA furniture and post-college cookware to something a little more lasting).
+      </div>
+          </div>
+					<div class="container text-center" data-scroll-reveal>
+            <a href="https://www.myregistry.com/wedding-registry/Gil-Forsyth-Jody-Denoncour-Washington-Dc/1327375" class="hover-effect">
+                <img src="images/registry.png" class="img-responsive img-circle" height="250" width="250" alt="" />
+                    <span class="img-circle">
+                        <i class="https://www.myregistry.com/wedding-registry/Gil-Forsyth-Jody-Denoncour-Washington-Dc/1327375"></i>
+                    </span>
+                </a>
+						<div class="mobile-divider"><span></span><i class="fa fa-heart"></i><span></span></div>
+          </div>
 				</div>
+      </div>
 			</div>
 		</section>
 
 		<!-- ========== REGISTRY END ========== -->
-
 		<!-- ========== PLAYLIST START ========== -->
 		<!--
 		<section id="playlist" style="background: #f5f4ec;">

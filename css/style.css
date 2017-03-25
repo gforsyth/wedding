@@ -41,6 +41,23 @@ h6 {
 	font-size: 2em;
 }
 
+.faq li { padding: 10px; }
+
+.faq li.q {
+  background: #4FC2E;
+  font-weight: bold;
+  font-size: 120%;
+  border-bottom: 1px #ddd solid;
+  cursor: pointer;
+}
+
+.faq li.a {
+  background: #3BB0D6;
+  font-size: 120%;
+  display: none;
+  color:#fff;
+}
+
 a,
 button {
 	transition: all .5s ease;
@@ -68,6 +85,10 @@ img {
 
 section {
 	padding: 80px 0;
+	font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #141823;
+
 }
 
 .btn {

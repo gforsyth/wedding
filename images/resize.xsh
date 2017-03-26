@@ -1,7 +1,7 @@
 import sys
 
-def resize(args):
-    convert @(args) -resize x250 @('m{}'.format(args))
+def resize(args, size=250):
+    convert @(args) -resize @('x{}'.format(size)) @('m{}'.format(args))
 
 
 if __name__ == "__main__":

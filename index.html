@@ -319,103 +319,108 @@
 						</a>
 					</div>
 				</div>
-			</div>
 		</section>
 
 		<!-- ========== ACCOMMODATION END ========== -->
 
-                <!-- ========== LOCATION START ========== -->
-                <section id="location">
+    <!-- ========== LOCATION START ========== -->
+    <section id="location">
 
-                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBILVYRAEpHNUNpPxXiRcBNIYCg2pEb9Cc &amp;sensor=true"></script>
-                <script type="text/javascript">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBILVYRAEpHNUNpPxXiRcBNIYCg2pEb9Cc &amp;sensor=true"></script>
+    <script type="text/javascript">
 
-                        function initialize() {
+        function initialize() {
 
-                                // Create an array of styles.
-                                var styles = [
-                                    {
-                                    "stylers": [
-                                        { "saturation": -100 },
-                                        { "gamma": 1 }
-                                    ]
-                                    },{
-                                    "featureType": "water",
-                                    "stylers": [
-                                        { "lightness": -12 }
-                                    ]
-                                    }
-                                ];
-                                // Create a new StyledMapType object, passing it the array of styles,
-                                // as well as the name to be displayed on the map type control.
-                                var styledMap = new google.maps.StyledMapType(styles,
-                                {name: "Styled Map"});
+        // Create an array of styles.
+        var styles = [
+        {
+        "stylers": [
+        { "saturation": -100 },
+        { "gamma": 1 }
+        ]
+        },{
+        "featureType": "water",
+        "stylers": [
+        { "lightness": -12 }
+        ]
+        }
+        ];
+        // Create a new StyledMapType object, passing it the array of styles,
+        // as well as the name to be displayed on the map type control.
+        var styledMap = new google.maps.StyledMapType(styles,
+        {name: "Styled Map"});
 
-                                                        var mapOptions = {
-                                                                scrollwheel: false,
-                                                                zoom: 15,
-                                                                center:
-                                                                    new
-                                                                    google.maps.LatLng(41.992450, -73.402262),
-                                mapTypeControlOptions: {
-                                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
-                                }
-                                }
-                                var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        var mapOptions = {
+        scrollwheel: false,
+        zoom: 14,
+        center:
+        new
+        google.maps.LatLng(41.992450, -73.402262),
+        mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        }
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        //Associate the styled map with the MapTypeId and set it to display.
+        map.mapTypes.set('map_style', styledMap);
+        map.setMapTypeId('map_style');
 
-                                //Associate the styled map with the MapTypeId and set it to display.
-                                map.mapTypes.set('map_style', styledMap);
-                                map.setMapTypeId('map_style');
-
-                                setMarkers(map, weddingplaces,'images/map-marker.png' );
-                        }
-
+        setMarkers(map, weddingplaces,'images/map-marker.png' );
+        }
 
 
-                        var weddingplaces = [
-                                ['Grey Cottage.', 41.992283, -73.401640],
-                        ];
 
-                        function setMarkers(map, locations, markerpic) {
-                                // Add markers to the map
-                                var image = {
-                                        url: markerpic,
-                                        // This marker is 42 pixels wide by 68 pixels tall.
-                                        size: new google.maps.Size(21,34),
-                                        // The origin for this image is 0,0.
-                                        //origin: new google.maps.Point(0,0),
-                                        origin: null,
-                                        // The anchor for this image is the base of the pin at 20,42.
-                                        //anchor: new google.maps.Point(20, 42)
-                                        anchor: null
-                                };
+        var weddingplaces = [
+        ['Grey Cottage.', 41.992283, -73.401640],
+        ];
 
-                                for (var i = 0; i < locations.length; i++) {
-                                        var place = locations[i];
-                                        var myLatLng = new google.maps.LatLng(place[1], place[2]);
-                                        var marker = new google.maps.Marker({
-                                                position: myLatLng,
-                                                map: map,
-                                                icon: image,
-                                                title: place[0],
-                                                zIndex: place[3],
-                                                animation: google.maps.Animation.DROP
-                                        });
+        function setMarkers(map, locations, markerpic) {
+        // Add markers to the map
+        var image = {
+        url: markerpic,
+        // This marker is 42 pixels wide by 68 pixels tall.
+        size: new google.maps.Size(21,34),
+        // The origin for this image is 0,0.
+        //origin: new google.maps.Point(0,0),
+        origin: null,
+        // The anchor for this image is the base of the pin at 20,42.
+        //anchor: new google.maps.Point(20, 42)
+        anchor: null
+        };
 
-                                        var contentString = "Some content";
-                                        google.maps.event.addListener(marker, "click", function() {
-                                                infowindow.setContent(this.html);
-                                                infowindow.open(map, this);
-                                        });
-                                }
-                        }
+        for (var i = 0; i < locations.length; i++) {
+        var place = locations[i];
+        var myLatLng = new google.maps.LatLng(place[1], place[2]);
+        var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: image,
+        title: place[0],
+        zIndex: place[0],
+        animation: google.maps.Animation.DROP
+        });
 
-                        google.maps.event.addDomListener(window, 'load', initialize);
-                </script>
+        var contentString = 'The Grey Cottage'+
+        '<br/>45 Prospect Mountain Road'+
+        '<br/>Salisbury, CT, 06068'+
+        '<br/><a href="https://www.google.com/maps/dir//45+Prospect+Mountain+Road,+Salisbury,+CT/@41.9936631,-73.4044094,17z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x89e77f1c91a24f0d:0xf226310fb6fdde90!2m2!1d-73.4022207!2d41.9936631" >Get directions!</a>';
 
-                <!--  <a href="https://www.google.com/maps/d/edit?mid=zwJ5Sc8HIDN4.kHElukijiprI">-->
-                <div id="map-canvas"></div>
-                </a>
+        var infowindow = new google.maps.InfoWindow({
+        content: contentString
+        });
+
+        google.maps.event.addListener(marker, "click", function() {
+            infowindow.open(map, marker);
+        });
+            }
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <!--  <a href="https://www.google.com/maps/d/edit?mid=zwJ5Sc8HIDN4.kHElukijiprI">-->
+    <div id="map-canvas"></div>
+    </a>
     <!-- ========== LOCATION END ========== -->
 
     <!-- GETTING THERE START -->

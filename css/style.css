@@ -31,10 +31,15 @@ h3,h4,h5,h6 {
 	margin: 3em 0;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
 }
 
 h6 {
 	color: #ff823e;
+}
+
+li {
+    font-family: 'Raleway', sans-serif;
 }
 
 .x {
@@ -71,7 +76,8 @@ a:hover {
 }
 
 p {
-	margin: 0 0 1em;
+    font-family: 'Raleway', sans-serif;
+	  margin: 0 0 1em;
 }
 
 hr {
@@ -165,6 +171,7 @@ section {
 	position: absolute;
 	width: 450px;
 	z-index: 100;
+  font-family: "Raleway"
 }
 
 /* NAVBAR

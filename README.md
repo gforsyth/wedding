@@ -1,7 +1,3 @@
-![wedding](/images/wedding_sticker.png?raw=true "Merging")
-
-Strom Borman and Katy Huff are getting married. Katy borrowed this websited source from Justin Grimes. Thanks for keeping stuff open, internet. 
-This website is where you can find info about Katy and Strom's Wedding.
-
-
-
+Gil Forsyth and Jody Denoncour are getting married.
+Gil borrowed this website source from Katy Huff who in turn borrowed it from Justin Grimes.
+Thanks for keeping stuff open, internet.

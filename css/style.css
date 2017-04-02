@@ -284,11 +284,11 @@ section {
  display:block;
 	display: inline-block;
 	position: relative;
-  background:transparent url('../images/jody_giglio.JPG') center top no-repeat;
+  background:transparent url('../images/headshots/mjody.headshot.jpg') center top no-repeat;
 }
 
 .jody:hover {
-   background-image: url('../images/jody_giglio.JPG');
+   background-image: url('../images/headshots/mjody.headshot.jpg');
 }
 
 .hover-effect i {

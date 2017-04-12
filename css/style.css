@@ -271,11 +271,11 @@ section {
  display:block;
 	display: inline-block;
 	position: relative;
- background:transparent url('../images/gil_giglio.jpg') center top no-repeat;
+ background:transparent url('../images/headshots/gil.headshot.jpg') center top no-repeat;
 }
 
 .gil:hover {
-    background-image: url('../images/gil_giglio.jpg');
+    background-image: url('../images/headshots/gil.headshot.jpg');
 }
 
 .jody{
